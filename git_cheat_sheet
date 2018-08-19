@@ -1,4 +1,39 @@
 
+
+Stashing
+--------
+
+
+git stash
+
+git stash list
+
+
+... some work ...
+
+git stash pop
+
+
+
+
+
+Marking special events with tagging
+-----------------------------------
+
+# light weight tags
+git tag mytag
+
+git tag --list
+
+# annotated tags
+git tag -a v1.0 -m "Release 1.0"
+
+git show v1.0
+
+
+
+
+
 diffs
 -----
 
