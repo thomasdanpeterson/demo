@@ -3,8 +3,7 @@
 Time travel with reset and reflog
 ---------------------------------
 
-
-
+git hist
 
 * d074082 (HEAD -> master) added more cheats
 * 939f5c5 updating readme again
@@ -38,6 +37,10 @@ git reset 134d749 --soft
 * 2d8c755 added ignore file
 * c94ca6d updated README
 * d7bc6cf Adding both a readme and a license file
+
+
+# show all the changes to the head 
+git reflog  
 
 
 
