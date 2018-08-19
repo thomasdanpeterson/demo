@@ -1,4 +1,11 @@
 
+diffs
+-----
+
+git diff c94ca6d HEAD
+git difftool c94ca6d HEAD
+
+
 
 Rename and deletiong files with git
 -----------------------------------
