@@ -1,0 +1,84 @@
+
+diffs
+-----
+
+git diff c94ca6d HEAD
+git difftool c94ca6d HEAD
+
+
+
+Rename and deletiong files with git
+-----------------------------------
+
+# stage the move/rename
+
+git mv example.txt demo.txt
+
+
+# stage the file deletion
+
+git rm demo.txt
+
+
+Staging files you delete from the OS
+------------------------------------
+
+# updates the staging area, addes deleted files
+git add -u
+
+
+# add everything including untracked file
+git add -A
+
+
+Ignore file list
+----------------
+
+.gitignore
+
+
+
+
+
+Creating a new repo
+-------------------
+
+git init demo
+
+
+backing out a staged change
+---------------------------
+
+git reset HEAD  README.md
+git checkout -- README.md
+
+
+Creating an alias
+-----------------
+
+git config --global alias.hist "log --oneline --graph --decorate --all"
+                          ----
+
+git hist
+
+
+git config --global alias.br "branch"
+
+
+git br
+
+
+Show all aliases
+----------------
+
+git config --global --list 
+
+
+Edit the config
+---------------
+
+git config --global -e
+
+
+
+
