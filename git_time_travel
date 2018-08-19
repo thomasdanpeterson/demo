@@ -1,0 +1,116 @@
+
+
+Time travel with reset and reflog
+---------------------------------
+
+git hist
+
+
+* d074082 (HEAD -> master) added more cheats
+* 939f5c5 updating readme again
+* 743f02e updating the license file
+* 134d749 (tag: v1.0) added .orig files to gitignore
+*   6f3f988 resolved conflict
+|\  
+| * d525f53 (very-bad) very bad update
+| * 11fc033 added cheat sheet
+* | f27fdf7 Causing issues again
+|/  
+* 7e96beb adding updates from branch
+* 2d8c755 added ignore file
+* c94ca6d updated README
+* d7bc6cf Adding both a readme and a license file
+
+
+# soft just moves the head
+git reset 134d749 --soft 
+
+
+git hist
+
+* 134d749 (HEAD -> master, tag: v1.0) added .orig files to gitignore
+*   6f3f988 resolved conflict
+|\  
+| * d525f53 (very-bad) very bad update
+| * 11fc033 added cheat sheet
+* | f27fdf7 Causing issues again
+|/  
+* 7e96beb adding updates from branch
+* 2d8c755 added ignore file
+* c94ca6d updated README
+* d7bc6cf Adding both a readme and a license file
+
+git reset 7e96beb --mixed
+
+Unstaged changes after reset:
+M	.gitignore
+M	LICENSE.md
+M	README.md
+
+
+
+git hist
+
+* 134d749 (tag: v1.0) added .orig files to gitignore
+*   6f3f988 resolved conflict
+|\  
+| * d525f53 (very-bad) very bad update
+| * 11fc033 added cheat sheet
+* | f27fdf7 Causing issues again
+|/  
+* 7e96beb (HEAD -> master) adding updates from branch
+* 2d8c755 added ignore file
+* c94ca6d updated README
+* d7bc6cf Adding both a readme and a license file
+
+
+git reset c94ca6d --hard
+HEAD is now at c94ca6d updated README
+
+
+git hist
+* 134d749 (tag: v1.0) added .orig files to gitignore
+*   6f3f988 resolved conflict
+|\  
+| * d525f53 (very-bad) very bad update
+| * 11fc033 added cheat sheet
+* | f27fdf7 Causing issues again
+|/  
+* 7e96beb adding updates from branch
+* 2d8c755 added ignore file
+* c94ca6d (HEAD -> master) updated README
+* d7bc6cf Adding both a readme and a license file
+
+git reflog 
+
+
+c94ca6d HEAD@{0}: reset: moving to c94ca6d
+7e96beb HEAD@{1}: reset: moving to 7e96beb
+134d749 HEAD@{2}: reset: moving to 134d749
+d074082 HEAD@{3}: reset: moving to d074082
+c94ca6d HEAD@{4}: reset: moving to c94ca6d
+2d8c755 HEAD@{5}: reset: moving to 2d8c755
+134d749 HEAD@{6}: reset: moving to 134d749
+d074082 HEAD@{7}: commit: added more cheats
+939f5c5 HEAD@{8}: commit: updating readme again
+743f02e HEAD@{9}: commit: updating the license file
+134d749 HEAD@{10}: reset: moving to HEAD
+134d749 HEAD@{11}: commit: added .orig files to gitignore
+6f3f988 HEAD@{12}: commit (merge): resolved conflict
+f27fdf7 HEAD@{13}: commit: Causing issues again
+7e96beb HEAD@{14}: checkout: moving from very-bad to master
+d525f53 HEAD@{15}: commit: very bad update
+11fc033 HEAD@{16}: commit: added cheat sheet
+7e96beb HEAD@{17}: checkout: moving from master to very-bad
+7e96beb HEAD@{18}: merge updates: Fast-forward
+2d8c755 HEAD@{19}: checkout: moving from updates to master
+7e96beb HEAD@{20}: commit: adding updates from branch
+2d8c755 HEAD@{21}: checkout: moving from master to updates
+2d8c755 HEAD@{22}: commit: added ignore file
+c94ca6d HEAD@{23}: commit: updated README
+d7bc6cf HEAD@{24}: commit (initial): Adding both a readme and a license file
+
+
+git reset d074082 --soft 
+
+

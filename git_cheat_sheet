@@ -1,5 +1,47 @@
 
 
+Time travel with reset and reflog
+---------------------------------
+
+
+
+
+* d074082 (HEAD -> master) added more cheats
+* 939f5c5 updating readme again
+* 743f02e updating the license file
+* 134d749 (tag: v1.0) added .orig files to gitignore
+*   6f3f988 resolved conflict
+|\  
+| * d525f53 (very-bad) very bad update
+| * 11fc033 added cheat sheet
+* | f27fdf7 Causing issues again
+|/  
+* 7e96beb adding updates from branch
+* 2d8c755 added ignore file
+* c94ca6d updated README
+* d7bc6cf Adding both a readme and a license file
+
+
+# soft just moves the head
+git reset 134d749 --soft 
+          ^^^^^^- this is the commit id 
+
+
+* 134d749 (HEAD -> master, tag: v1.0) added .orig files to gitignore
+*   6f3f988 resolved conflict
+|\  
+| * d525f53 (very-bad) very bad update
+| * 11fc033 added cheat sheet
+* | f27fdf7 Causing issues again
+|/  
+* 7e96beb adding updates from branch
+* 2d8c755 added ignore file
+* c94ca6d updated README
+* d7bc6cf Adding both a readme and a license file
+
+
+
+
 Stashing
 --------
 
